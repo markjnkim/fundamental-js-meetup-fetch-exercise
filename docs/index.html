@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fetch API Playground</title>
+        <link rel="stylesheet" href="flag-icon.min.css">
+        <link rel="stylesheet" href="fetchplayground.css">
+    </head>
+    <body>
+        <h1>Fetch API Playground</h1>
+        <div class="people" id="people">
+        </div>
+    </body>
+    <script type="text/javascript">
+        fetch('https://randomuser.me/api/?results=100').then((response) => {
+            return response.json();
+        }).then((myJSON) => {
+            let html = '';
+
+            for (const result of myJSON.results) {
+                html = `${html}
+                    <div class="person">
+                        <img align="middle" src="${result.picture.medium}" alt="Profile Picture">
+                        <h3><span class="flag-icon flag-icon-${result.nat.toLowerCase()}"></span> ${result.name.title} ${result.name.first} ${result.name.last}</h3>
+                    </div>
+                `;
+            }
+
+            document.getElementById('people').innerHTML = html;
+        });
+    </script>
+</html>
