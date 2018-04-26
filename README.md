@@ -12,6 +12,10 @@ This demo uses the excellent [randomuser.me API](https://randomuser.me/documenta
 
 Additionally it uses CSS and icons from [flag-icon-css](http://flag-icon-css.lip.is/) to show the national flag of each user returned.
 
+## Demo
+
+[Try it out on GitHub Pages](https://simonprickett.github.io/fundamental-js-meetup-fetch-exercise/).
+
 ## Running Locally
 
 Clone this repo, then cd to it and serve it using a static web server.
